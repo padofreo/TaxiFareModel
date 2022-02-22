@@ -1,7 +1,7 @@
 import mlflow
 from mlflow.tracking import MlflowClient
 
-EXPERIMENT_NAME = "[JP][Canada][paul]TaxiFareModel V1"
+EXPERIMENT_NAME = "test_experiment"
 
 # Indicate mlflow to log to remote server
 mlflow.set_tracking_uri("https://mlflow.lewagon.co/")
@@ -13,13 +13,7 @@ try:
 except BaseException:
     experiment_id = client.get_experiment_by_name(EXPERIMENT_NAME).experiment_id
 
-yourname = 'Padofreo'
-
-if yourname is None:
-    print("please define your name, il will be used as a parameter to log")
-
 for model in ["linear", "Randomforest"]:
     run = client.create_run(experiment_id)
     client.log_metric(run.info.run_id, "rmse", 4.5)
     client.log_param(run.info.run_id, "model", model)
-    client.log_param(run.info.run_id, "student_name", yourname)

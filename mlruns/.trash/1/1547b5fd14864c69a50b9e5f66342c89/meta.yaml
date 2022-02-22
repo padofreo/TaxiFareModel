@@ -1,0 +1,15 @@
+artifact_uri: file:///home/paul/code/padofreo/TaxiFareModel/mlruns/1/1547b5fd14864c69a50b9e5f66342c89/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 1547b5fd14864c69a50b9e5f66342c89
+run_uuid: 1547b5fd14864c69a50b9e5f66342c89
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1645512541545
+status: 1
+tags: []
+user_id: unknown
